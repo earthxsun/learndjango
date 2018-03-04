@@ -1,5 +1,6 @@
 {% extends 'learning_log/base.html' %}
 <!DOCTYPE html>
+<html>
 <body>
     {% block content %}
         <p>Topic: {{ topic }}</p>
@@ -13,6 +14,9 @@
                 <li>
                     <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
                     <p>{{ entry.text|linebreaks }}</p>
+                    <p>
+                        <a href="{% url 'learning_log:edit_entry' entry.id %}">edit entry</a>
+                    </p>
                 </li>
                 {% empty %}
                 <li>
