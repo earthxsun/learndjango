@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'bootstrap3',
     'learning_log.apps.LearningLogConfig',
     'users',
+    'books',
 ]
 
 MIDDLEWARE_CLASSES = [
